@@ -1,0 +1,160 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    &__title{
+        margin-bottom: 52px;
+
+        @media (max-width: $tablet){
+            font-size: rem(24);
+            line-height: rem(29);
+        }
+    }
+
+    &__subtitle{
+        font-size: rem(36);
+        line-height: rem(44);
+        text-transform: none;
+        margin-bottom: 63px;
+
+        @media (max-width: $tablet){
+            margin-bottom: 25px;
+        }
+    }
+
+    &__text{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        text-align: center;
+    }
+
+    &__btn{
+        align-self: center;
+        font-size: 14px;
+        line-height: 16px;
+        width: 250px;
+        height: 50px;
+
+        @media (max-width: $tablet){
+            max-width: none;
+        }
+    }
+
+    &__input, &__tarea{
+
+        border: 2px solid #fff;
+        color: #fff;
+        background-color: transparent;
+
+        padding: 15px 20px;
+        font-size: 14px;
+        line-height: 16px;
+
+        @media (max-width: $tablet){
+            padding: 16px 30px;
+
+        }
+
+        &:focus{
+            outline: 2px solid $theme;
+        }
+
+        &::placeholder{
+            color: $black;
+            opacity: .5;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    }
+
+
+    &__input {
+        flex-grow: 1;
+        align-self: stretch;
+        border: 0;
+        background: rgba(255, 255, 255, 0.2);
+        width: 255px;
+        height: 50px;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 27px;
+
+        &::placeholder{
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 27px;
+            text-align: center;
+            color: #BEBEBE;
+        }
+
+        &:focus{
+            outline: 2px solid $theme;
+        }
+
+        @media (max-width: $laptop){
+            margin-left: 14px;
+        }
+
+        @media (max-width: $tablet){
+            margin-left: 0;
+        }
+
+        @media (max-width: 539px){
+            width: 100%;
+        }
+       
+    }
+
+    &__row{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 20px 22px;
+        align-items: center;
+
+        @media (max-width: 539px){
+            > * {
+                grid-column: span 4;
+            }
+        }
+        
+        > * {
+            grid-column: span 2;
+        }
+
+        &_4-columns{
+            grid-template-columns: repeat(8, 1fr);
+            > * {
+                grid-column: span 2;
+            }
+            @media (max-width: 1149px){
+
+                max-width: 800px;
+                margin: 0 auto;
+
+                > * {
+                    grid-column: span 4;
+                }
+
+                .form__input, .form__btn {
+                    width: 100%;
+                    margin: 0;
+                }
+            }
+            @media (max-width: 539px){
+                > * {
+                    grid-column: span 8;
+                }
+            }
+        }
+    }
+}

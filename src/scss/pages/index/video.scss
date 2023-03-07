@@ -1,0 +1,66 @@
+.video-section{
+
+    &__content{
+        overflow: visible;
+
+        position: relative;
+        &::before {
+            content: "IV";
+            font-family: 'Playfair';
+            position: absolute;
+            top: 19px;
+            right: -210px;
+            font-weight: 600;
+            font-size: 400px;
+            line-height: 533px;
+            text-align: center;
+            opacity: 0.02;
+
+
+        }
+    }
+
+    &__video{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background: linear-gradient(0deg, rgba(36, 43, 51, 0.8), rgba(36, 43, 51, 0.8)), url('/img/vid.png'), #626262;
+        background-position: center;
+
+    }
+
+    .webp &__video {
+        background: linear-gradient(0deg, rgba(36, 43, 51, 0.8), rgba(36, 43, 51, 0.8)), url('/img/vid.webp'), #626262;
+        background-position: center;
+
+    }
+
+    &__video-wrapper{
+        margin: 0 auto;
+        max-width: 727px;
+        height: 656px;
+        position: relative;
+
+        @media (max-width: $mobileL){
+            height: 350px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 10;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 100px;
+            background-image: url('/img/svg/play-button.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+        &:hover{
+            cursor: pointer;
+        }
+
+    }
+}

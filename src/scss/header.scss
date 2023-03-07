@@ -1,0 +1,154 @@
+.header{
+    background: $black;
+    z-index: 1;
+
+    .container{
+        overflow: visible;
+    }
+
+    &__logo{
+        display: flex;
+        justify-content: center;
+    }
+
+
+    &__content{
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+
+    &_absolute{
+        
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        background: none;
+        
+    }
+
+    &__buttons{
+        display: flex;
+        gap: 29px;
+
+        @media (max-width: 539px){
+            gap: 10px;
+        }
+    }
+
+
+    & .burg {
+        justify-content: end;
+        @media (max-width: $laptop){
+            order: 3;
+            margin-left: 0;
+        }
+    }
+
+
+
+    &__content-row{
+        width: 100%;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        height: 100%;
+    }
+
+    .burg {
+        
+        margin-bottom: -1px;
+
+        z-index: 101;
+    }
+
+
+}
+
+$trigger: 1024px;
+
+.header__nav{
+    z-index: 10;
+    position: relative;
+    color: #fff;
+    text-transform: uppercase;
+
+    padding-top: 8px;
+    padding-bottom: 10px;
+    
+
+    @media (max-width: $trigger) {
+        overflow: hidden;
+        background-color: $background;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        left: -100%;
+        min-width: 320px;
+        width: 100%;
+        max-width: 320px;
+        height: 100vh;
+        transition: all 0.3s;
+    }
+
+    & > ul {
+
+        @media (max-width: $trigger) {
+            flex-direction: column;
+            min-width: 320px;
+            height: 100%;
+            padding-top: 150px;
+            text-align: center;        
+            gap: 40px;
+            overflow: auto;
+            justify-content:flex-start;
+
+
+        }
+
+    }
+
+    a {
+        font-size: 14px;
+        line-height: 140%;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-transform: capitalize;
+
+        @media (max-width: $trigger){
+            font-size: 24px;
+            color: $black;
+        }
+
+        &_current {
+            &::before {
+                @media (max-width: $trigger){
+                    bottom: -14px;
+                    width: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            } 
+        }
+    }
+
+
+}
+.header__nav.show {
+    @media (max-width: $trigger) {
+        left: 0;
+        z-index: 100;
+    }
+}

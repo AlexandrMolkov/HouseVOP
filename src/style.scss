@@ -1,0 +1,23 @@
+@use "sass:math";
+
+@import "scss/common/_null.scss";
+@import "scss/common/_variables.scss";
+@import "scss/common/_visually-hidden.scss";
+@import "scss/common/_fonts.scss";
+@import "scss/common/_mixins.scss";
+@import "scss/common/_functions.scss";
+@import "scss/common/_container.scss";
+@import "scss/common/_burg.scss";
+@import "scss/common/_nav.scss";
+@import "scss/common/_logo.scss";
+@import "scss/common/_scrollbar.scss";
+@import "scss/common/_contact.scss";
+@import "scss/common/_keyframes.scss";
+@import "scss/common/_form.scss";
+@import "scss/pages/parts/map.scss";
+//@import "scss/common/_fullscroll.scss";
+
+@import "scss/main";
+@import "scss/header";
+@import "scss/footer";
+@import "scss/pages/index";

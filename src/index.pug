@@ -1,0 +1,29 @@
+include pug/head
+include pug/common/mixins/header
+
+doctype html
+html(lang="ru")
+    +head('Главная')
+    body
+        .wrapper
+            +header([{link:'#', content:'О комплексе'},
+                {link:'#', content:'Район'},
+                {link:'#', content:'Каталог квартир'},
+                {link:'#', content:'Ипотека'},
+                {link:'#', content:'Контакты'},
+                ],'','header_absolute')
+            main.main
+
+                include pug/pages/index/hero
+                include pug/pages/index/testimonials
+                include pug/pages/index/appartments
+                include pug/pages/index/cta
+                include pug/pages/index/video
+                include pug/pages/index/map
+                include pug/pages/index/cta-form
+                
+            include pug/footer
+        script(src="js/app.min.js")
+       
+
+        

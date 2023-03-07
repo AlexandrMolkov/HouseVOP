@@ -1,0 +1,81 @@
+.appartments{
+
+
+
+    &__content{
+        position: relative;
+        overflow: visible;
+        &::before {
+            content: "III";
+            font-family: 'Playfair';
+            position: absolute;
+            top: -75px;
+            left: -178px;
+            font-weight: 600;
+            font-size: 400px;
+            line-height: 533px;
+            text-align: center;
+            opacity: 0.02;
+        }
+    }
+
+    &__title{
+        margin-bottom: 90px;
+        font-style: normal;
+    }
+    &__item{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 30px;
+        
+        > * {
+            grid-column: span 6;
+        }
+        @media (max-width: $tablet){
+        
+            > * {
+                grid-column: span 12;
+            }
+        }
+    }
+}
+
+.appartment{
+    position: relative;
+
+    max-width: 520px;
+
+
+    @media (max-width: $tablet){
+        
+        margin: 0 auto;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0) 0.01%, #242B33 100%); 
+
+    }
+   
+    &__title{
+        bottom: 13%;
+        left: 8%;
+        position: absolute;
+        font-weight: 400;
+        z-index: 10;
+        font-family: 'Raleway';
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &__image{
+        width: 100%;
+        height: auto;  
+        
+    }
+
+}

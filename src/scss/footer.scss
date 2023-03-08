@@ -16,8 +16,8 @@ body {
 
 
 .footer {
-    padding-top: 78px;
-    padding-bottom: 10px;
+    padding-top: 58px;
+    padding-bottom: 42px;
     
     width: 100%;
     min-height: 160px;
@@ -54,7 +54,6 @@ body {
     }
 
     &__content{
-        
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -101,6 +100,9 @@ body {
     }
 
     &__list{
+
+        padding-left: 12px;
+        padding-top: 12px;
 
     }
 

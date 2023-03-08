@@ -2,11 +2,15 @@
     position: relative;
     padding-left: 40px;
     white-space: pre;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
     
     &::before {
         content: "";
         position: absolute;
-        top: -55%;
+        top: 0;
         left: 0;
         width: 24px;
         height: 24px;
@@ -16,7 +20,7 @@
     }
 
     @media (max-width: $laptop){
-        font-size: 14;
+        font-size: 14px;
     }
 
     @media (max-width: 960px){
@@ -26,13 +30,23 @@
 
 }
 .contact-location{
+    left: -18px;
     &::before {
-        background-image: url('../img/svg/icons/loc.svg');
+        background-image: url('../img/svg/icons/placeholder.svg');
+    }
+
+    @media (max-width: $tablet){
+        left: 0;
     }
 }
 .contact-phone{
+    right: 65px;
     &::before {
         background-image: url('../img/svg/icons/phone.svg');
+    }
+    
+    @media (max-width: $tablet){
+        right: 0;
     }
 }
 .contact-mail{

@@ -225,64 +225,6 @@ table{
     }
 }
 
-.contact-location, .contact-phone, .contact-mail{
-    position: relative;
-    padding-left: 40px;
-    white-space: pre;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 24px;
-        height: 24px;
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: center;
-    }
-
-    @media (max-width: $laptop){
-        font-size: rem(14);
-    }
-
-    @media (max-width: 960px){
-        margin-left: 0px;
-    }
-
-
-}
-.contact-location{
-    left: -18px;
-    &::before {
-        background-image: url('../img/svg/icons/placeholder.svg');
-    }
-
-    @media (max-width: $tablet){
-        left: 0;
-    }
-}
-.contact-phone{
-    right: 65px;
-    &::before {
-        background-image: url('../img/svg/icons/phone.svg');
-    }
-    
-    @media (max-width: $tablet){
-        right: 0;
-    }
-}
-.contact-mail{
-    padding-top: 5px;
-    &::before {
-        background-image: url('../img/svg/icons/mail.svg');
-    }
-}
-
 .btn{
     padding: 14px 14px;
     display: inline-block;
@@ -306,6 +248,11 @@ table{
 
     }
 
+    &:active{
+        color: rgba(#fff, .3);
+        opacity: .3;
+    }
+
     &-white{
         padding: 15px 35px;
         letter-spacing: 0.1em;
@@ -323,10 +270,7 @@ table{
     
         }
     }
-    &:active{
-        color: rgba(#fff, .3);
-        opacity: .3;
-    }
+
 
     &-border{
         border: 2px solid #FFFFFF;
@@ -334,25 +278,17 @@ table{
         background: none;
         color: #fff;
     }
-
-    &.w-100{
-        width: 100%;
-
-        &:hover{
-            transform: rotate(-1deg) scale(1.1);
-        }
-    }
     
 }
 a{
     transition: .3s;
     &:hover{
-        //opacity: 0.7;
+        opacity: 0.7;
         border: 0;
         outline: 0;
     }
     &:active{
-        //opacity: 0.7;
+        opacity: 0.3;
         border: 0;
         outline: 0;
     }
@@ -362,4 +298,5 @@ a{
 .social{
     display: flex;
     gap: 20px;
+    padding-top: 3px;
 }

@@ -10,7 +10,7 @@
             font-family: 'Playfair';
             position: absolute;
             top: -75px;
-            left: -178px;
+            left: -200px;
             font-weight: 600;
             font-size: 400px;
             line-height: 533px;
@@ -29,16 +29,17 @@
     }
     &__item{
         display: grid;
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 30px;
+        row-gap: 40px;
         
         > * {
-            grid-column: span 6;
+            grid-column: span 3;
         }
         @media (max-width: $tablet){
         
             > * {
-                grid-column: span 12;
+                grid-column: span 6;
             }
         }
     }
@@ -47,11 +48,10 @@
 .appartment{
     position: relative;
 
-    max-width: 520px;
-
 
     @media (max-width: $tablet){
-        
+        max-width: 520px;
+
         margin: 0 auto;
     }
 
@@ -64,22 +64,37 @@
         height: 100%;
         background: linear-gradient(180deg, #242B33 0%, rgba(36, 43, 51, 0) 0.01%, #242B33 100%); 
 
+
     }
    
-    &__title{
-        bottom: 13%;
-        left: 8%;
+    &__link{
+        width: 100%;
+        height: 100%;
         position: absolute;
+        bottom: 0;
+        left: 0;
+        
         font-weight: 400;
         z-index: 10;
         font-family: 'Raleway';
         font-size: 24px;
         line-height: 28px;
+
+        > span{
+            position: absolute;
+            bottom: 13%;
+            left: 8%;
+        }
+
+        &:hover{
+            opacity: 0.6;
+        }
     }
+
     &__image{
         width: 100%;
-        height: auto;  
-        
+        height: auto;
+
     }
 
 }

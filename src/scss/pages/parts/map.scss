@@ -22,6 +22,10 @@
             line-height: 533px;
             text-align: center;
             opacity: 0.02;
+
+            @media (max-width: $laptop){
+                display: none;
+            }
         }
     }
 

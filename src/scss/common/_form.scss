@@ -1,6 +1,7 @@
 .form {
     display: flex;
     flex-direction: column;
+    gap: 30px;
     position: relative;
     z-index: 2;
 
@@ -118,7 +119,6 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
-        padding: 20px 22px;
         align-items: center;
 
         @media (max-width: 539px){

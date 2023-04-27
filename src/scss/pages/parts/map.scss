@@ -1,9 +1,8 @@
 .map-section {
     padding-top: 170px;
     padding-bottom: 177px;
-    &:hover {
-        filter: brightness(1) ;
-    }
+
+
 
     &__content{
         position: relative;
@@ -34,8 +33,33 @@
 
 
     &__map{
-        background: #ccc;
 
+        background: #ccc;
         height: 358px;
+
+        iframe{
+            width: 100%;
+        }
+
+        opacity: .2;
+        transition: opacity .3s;
+
+        overflow: hidden;
+        
+
+        @media (max-width: $laptop){
+            opacity: .9;
+        }
+
+        &:hover {
+            cursor: grab;
+            opacity: .9;
+        }
+
+        &.active{
+            opacity: .9;
+        }
+
+
     }
 }

@@ -6,7 +6,6 @@
         display: flex;
         gap: 37px;
         width: 100%;
-        overflow: auto;
         justify-content: flex-start;
 
     }
@@ -27,8 +26,6 @@
         white-space: pre;
 
         &:focus{
-            outline: 0;
-            opacity: .3;
         }
 
         &_current {

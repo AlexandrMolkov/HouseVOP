@@ -1,5 +1,4 @@
 .logo{
-
     transition: opacity .1s;
     display: flex;
     align-items: center;
@@ -23,10 +22,4 @@
 
     }
 
-    a{
-        &:focus{
-            outline: 0;
-            opacity: .8;
-        }
-    }
 }

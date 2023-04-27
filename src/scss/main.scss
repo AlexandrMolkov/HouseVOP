@@ -191,9 +191,6 @@ section{
     height: 100%;
 }
 
-*:focus {
-    outline: 1px solid #fff;
-}
 
 .laptop-hidden{
     @media (max-width: $laptop){
@@ -284,13 +281,9 @@ a{
     transition: .3s;
     &:hover{
         opacity: 0.7;
-        border: 0;
-        outline: 0;
     }
     &:active{
         opacity: 0.3;
-        border: 0;
-        outline: 0;
     }
 }
   
